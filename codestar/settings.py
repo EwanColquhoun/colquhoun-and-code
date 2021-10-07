@@ -35,7 +35,6 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['colquhoun-and-code.herokuapp.com', 'localhost']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -69,6 +68,23 @@ MESSAGE_TAGS = {
     messages.SUCCESS: 'alert-success',
     messages.WARNING: 'alert-warning',
     messages.ERROR: 'alert-danger',
+}
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        "APP": {
+            "client_id": os.environ.get('CLIENT_ID'),
+            "secret": os.environ.get('CLIENT_SECRET'),
+            "key": ""
+        },
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'offline',
+        }
+    }
 }
 
 
