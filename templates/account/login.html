@@ -29,7 +29,7 @@
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
         <button class="btn btn-signup right" type="submit">{% trans "Sign In" %}</button>
-        <a href="{% provider_login_url 'google' %}">Sign In With Google</a>
+        <button class="btn btn-signup right"><a href="{% provider_login_url 'google' %}">Sign In With Google</a></button>
       </form>
     </div>
   </div>
